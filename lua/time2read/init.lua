@@ -40,7 +40,7 @@ end
 
 function M.time2read_insert()
 	if filetype_check() == true then
-		vim.api.nvim_create_autocmd("BufWritePost", {
+		vim.api.nvim_create_autocmd("InsertCharPre", {
 			callback = minutes2time(minutes2read()),
 		})
 
